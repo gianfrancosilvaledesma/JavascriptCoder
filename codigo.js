@@ -9,47 +9,32 @@ function PreguntarEdad(){
 while(Edad1 === null || Edad1 === ""|| isNaN(Edad1) ){
     Edad1 = prompt("No dejes Campo vacio, responde bien")
 }
-    const EdadProcesada = parseInt(Edad1);
+    let EdadProcesada = parseInt(Edad1);
     return EdadProcesada;
     }
-    const EdadProcesada = PreguntarEdad()
+    let EdadProcesada = PreguntarEdad()
 //PreguntarEdad()
 
 function ResponderEdad (){
-if(EdadProcesada < 18){
-    alert("sos menor de edad")
+if(EdadProcesada >= 18){
+    alert("Sos Mayor, puede ingresar")
 }
-else if(EdadProcesada >= 18){
-    alert ("sos grande che")
+else if(EdadProcesada < 18){
+    alert ("Sos menor, no es posible que ingreses")
+}
+while(EdadProcesada < 18){
+        EdadProcesada = PreguntarEdad();
 }
 }
 
 ResponderEdad()
- //PreguntarEdad();
-//else{
-    //alert ("pusiste cualquier cosa")
-//}
 
+const cervezas=["negra","roja","rubia","ipa"]
 
-//function saludar(nombre) {
-   // console.log (`Hola ${nombre}`);
-//}
+function Elegircervezas (cervezas){
+    let cervezaElegida=parseInt(prompt("Elija su cerveza: \n 1 - Cerveza negra \n 2 - Cerveza roja \n 3 - Cerveza Rubia \n 4 - Cerveza ipa \n Por favor ingrese el número de la cerveza que quiere."))
+    if (cervezaElegida===1) alert("Elegiste:", cervezas[0])
+}
 
-//saludar("jorge");
-//saludar('Enrique')
-
-//const multipliacion = function(a,b){
-    //return a * b ;
-//};
-//console.log(multipliacion(5, 3));
-
-//type result = "pass" | "fail"
- 
-//function verify(result: Result) {
-  //if (result === "pass") {
-    //console.log("Passed")
-  //} else {
-    //console.log("Failed")
-  //}
-
-  const bebidas = [cerveza,version,whisky]
+Elegircervezas()
+console.log(cervezas)
