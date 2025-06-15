@@ -31,10 +31,13 @@ ResponderEdad()
 
 const cervezas=["negra","roja","rubia","ipa"]
 
-function Elegircervezas (cervezas){
-    let cervezaElegida=parseInt(prompt("Elija su cerveza: \n 1 - Cerveza negra \n 2 - Cerveza roja \n 3 - Cerveza Rubia \n 4 - Cerveza ipa \n Por favor ingrese el número de la cerveza que quiere."))
-    if (cervezaElegida===1) alert("Elegiste:", cervezas[0])
+function Elegircervezas (){
+    let cervezaElegida=parseInt(prompt("Como usted es mayor, Elija su cerveza: \n 1 - Cerveza negra \n 2 - Cerveza roja \n 3 - Cerveza Rubia \n 4 - Cerveza ipa \n Por favor ingrese el número de la cerveza que quiere."))
+   if (cervezaElegida >= 1 && cervezaElegida <= cervezas.length) {
+        alert("Elegiste: Cerveza " + cervezas[cervezaElegida - 1]);
+    } else {
+        alert("Opción inválida");
+    }
 }
-
-Elegircervezas()
-console.log(cervezas)
+Elegircervezas(cervezas)
+console.log(cervezas)  
