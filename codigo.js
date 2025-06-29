@@ -24,17 +24,7 @@ function ResponderEdad (){
   alert("Sos mayor, puede ingresar.");
   return EdadProcesada;
   }
-//if(EdadProcesada >= 18){
-  //  alert("Sos Mayor, puede ingresar")
-//}
-//else if(EdadProcesada < 18){
-  //  alert ("Sos menor, no es posible que ingreses")
-    
-//}
-//while(EdadProcesada < 18){
-       // EdadProcesada = PreguntarEdad();
-//}
-//}
+
 
 ResponderEdad()
 
