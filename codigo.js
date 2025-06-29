@@ -1,4 +1,4 @@
-let nombre = "Gian"
+let nombre = "Gianfranco"
 
 console.log(nombre)
 
@@ -16,16 +16,25 @@ while(Edad1 === null || Edad1 === ""|| isNaN(Edad1) ){
 //PreguntarEdad()
 
 function ResponderEdad (){
-if(EdadProcesada >= 18){
-    alert("Sos Mayor, puede ingresar")
-}
-else if(EdadProcesada < 18){
-    alert ("Sos menor, no es posible que ingreses")
-}
-while(EdadProcesada < 18){
-        EdadProcesada = PreguntarEdad();
-}
-}
+
+    while (EdadProcesada < 18) {
+    alert("Sos menor, no es posible que ingreses.");
+    EdadProcesada =PreguntarEdad();
+  }
+  alert("Sos mayor, puede ingresar.");
+  return EdadProcesada;
+  }
+//if(EdadProcesada >= 18){
+  //  alert("Sos Mayor, puede ingresar")
+//}
+//else if(EdadProcesada < 18){
+  //  alert ("Sos menor, no es posible que ingreses")
+    
+//}
+//while(EdadProcesada < 18){
+       // EdadProcesada = PreguntarEdad();
+//}
+//}
 
 ResponderEdad()
 
@@ -37,7 +46,38 @@ function Elegircervezas (){
         alert("Elegiste: Cerveza " + cervezas[cervezaElegida - 1]);
     } else {
         alert("Opción inválida");
+        Elegircervezas();
     }
 }
-Elegircervezas(cervezas)
+Elegircervezas()
 console.log(cervezas)  
+
+
+function Usuario(nombre = "", tipoDeCliente = "", cervezaPreferida = []) {
+  this.nombre = nombre;
+  this.tipoDeCliente = tipoDeCliente;
+  this.cervezaPreferida = cervezaPreferida;
+  this.mostrarCervezas = function () {
+    this.cervezaPreferida.forEach(cerveza => console.log(cerveza));
+  };
+}
+//function Usuario(nombre = "", TipoDeCliente = "", CervezaPreferida = []){
+  //this.nombre = nombre;
+ // this.TipoDeCliente = TipoDeCliente
+ // this.CervezaPreferida = CervezaPreferida
+ // this.mostrarCervezas = function(){
+  //  for(let Cerveza of this.CervezaPreferida){
+  //    console.log(Cerveza)
+  //  }
+  //}
+//}
+ const Gian = new Usuario ("Gian", "VIP",["negra"])
+ const Lucas = new Usuario ("Luquitas", "Estandar",["ipa"])
+
+ console.log(Gian)
+ console.log (Lucas)
+//const andres = new Usuario("Andrés", "Estudiante", true, ["Js"])
+//const juan = new Usuario("Juan", "Estudiante")
+
+//console.log(andres)
+//console.log(juan)
